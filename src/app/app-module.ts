@@ -15,6 +15,9 @@ import { Toolbar } from './components/nevigation/toolbar/toolbar';
 import { SideNevbarList } from './components/nevigation/side-nevbar-list/side-nevbar-list';
 import { Home } from './components/home/home';
 import { Profile } from './components/profile/profile';
+import { AtsResumeChecker } from './components/home/ats-resume-checker/ats-resume-checker';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -25,7 +28,8 @@ import { Profile } from './components/profile/profile';
     Toolbar,
     SideNevbarList,
     Home,
-    Profile
+    Profile,
+    AtsResumeChecker
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,8 @@ import { Profile } from './components/profile/profile';
   MatToolbarModule,
   MatTabsModule,
   MatListModule,
-  MatIconModule 
+  MatIconModule,
+  HttpClientModule 
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

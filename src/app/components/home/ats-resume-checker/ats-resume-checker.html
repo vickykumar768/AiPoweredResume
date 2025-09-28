@@ -1,0 +1,85 @@
+<!-- <div class="bg-[#162447] min-h-screen p-8 font-sans text-white">
+  <header>
+    <h1 class="text-4xl font-bold mb-4">Free ATS Resume Checker</h1>
+    <p class="max-w-md mb-10">
+      Scan your resume for 30+ criteria and instantly boost your score. 
+      Upload from desktop or mobile.
+    </p>
+  </header>
+
+  <div class="bg-[#233554] rounded-lg p-8 flex flex-col items-center max-w-md mx-auto mb-12">
+    <button class="bg-[#21e6c1] text-[#162447] font-bold py-4 px-10 rounded-md mb-4 hover:bg-teal-400 transition">
+      Check Your Score
+    </button>
+    <input type="file" accept=".pdf,.doc,.docx,.txt,.rtf" 
+           class="mb-3 text-[#888] file:bg-[#21e6c1] file:text-[#162447] file:px-4 file:py-2 file:rounded-md file:border-0 cursor-pointer"/>
+    <p class="text-sm text-[#aaa]">We support DOC, DOCX, PDF, RTF, TXT. Max 5MB.</p>
+  </div>
+
+  <div class="bg-white text-[#162447] rounded-xl p-8 flex items-center max-w-4xl mx-auto mb-12 shadow-md">
+    <div class="w-32 h-44 bg-gray-200 rounded-lg mr-10"></div>
+    <div>
+      <ul class="space-y-3 list-disc pl-5 marker:text-[#21e6c1] font-semibold text-lg">
+        <li>Contact Information</li>
+        <li>Professional Summary</li>
+        <li>Work History</li>
+        <li>Skills</li>
+        <li>Education</li>
+      </ul>
+      <div class="mt-6 w-16 h-16 bg-[#21e6c1] rounded-full flex flex-col justify-center items-center font-bold text-[#162447] text-xl">
+        <span>82</span>
+        <span class="text-xs font-normal">GOOD</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="flex items-center justify-center text-[#ccc] space-x-8 text-sm max-w-4xl mx-auto">
+    <span>EXCELLENT</span>
+    <div class="bg-green-500 px-2 rounded text-white font-semibold">★★★★☆</div>
+    <span>16,264 reviews on Trustpilot</span>
+  </footer>
+</div> -->
+
+<div class="bg-[#162447] min-h-screen p-8 font-sans text-white">
+  <header>
+    <h1 class="text-4xl font-bold mb-4">Free ATS Resume Checker</h1>
+    <p class="max-w-md mb-10">
+      Scan your resume for 30+ criteria and instantly boost your score. 
+      Upload from desktop or mobile.
+    </p>
+  </header>
+
+  <div class="bg-[#233554] rounded-lg p-8 flex flex-col items-center max-w-md mx-auto mb-12">
+    <button (click)="submit()" 
+            class="bg-[#21e6c1] text-[#162447] font-bold py-4 px-10 rounded-md mb-4 hover:bg-teal-400 transition">
+      Check Your Score
+    </button>
+
+    <input type="file" (change)="onFileSelected($event)" accept=".pdf,.doc,.docx,.txt,.rtf" 
+           class="mb-3 text-[#888] file:bg-[#21e6c1] file:text-[#162447] file:px-4 file:py-2 file:rounded-md file:border-0 cursor-pointer"/>
+    <p class="text-sm text-[#aaa]">We support DOC, DOCX, PDF, RTF, TXT. Max 5MB.</p>
+  </div>
+
+  <div class="bg-white text-[#162447] rounded-xl p-8 flex items-center max-w-4xl mx-auto mb-12 shadow-md" *ngIf="result">
+    <div class="w-32 h-44 bg-gray-200 rounded-lg mr-10"></div>
+    <div>
+      <ul class="space-y-3 list-disc pl-5 marker:text-[#21e6c1] font-semibold text-lg">
+        <li>Contact Information</li>
+        <li>Professional Summary</li>
+        <li>Work History</li>
+        <li>Skills</li>
+        <li>Education</li>
+      </ul>
+      <div class="mt-6 w-16 h-16 bg-[#21e6c1] rounded-full flex flex-col justify-center items-center font-bold text-[#162447] text-xl">
+        <span>{{ result.score }}</span>
+        <span class="text-xs font-normal">{{ result.rating }}</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="flex items-center justify-center text-[#ccc] space-x-8 text-sm max-w-4xl mx-auto">
+    <span>EXCELLENT</span>
+    <div class="bg-green-500 px-2 rounded text-white font-semibold">★★★★☆</div>
+    <span>16,264 reviews on Trustpilot</span>
+  </footer>
+</div>
