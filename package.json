@@ -2,11 +2,11 @@
   "name": "ai-powered-resume",
   "version": "0.0.0",
   "scripts": {
-  "ng": "ng",
-  "start": "ng serve",
-  "build": "ng build",
-  "watch": "ng build --watch --configuration development",
-  "test": "ng test"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
   "prettier": {
     "printWidth": 100,
@@ -38,10 +38,9 @@
     "@angular-devkit/core": "^20.3.3",
     "@angular-devkit/schematics": "^20.3.3",
     "@angular/build": "^20.3.3",
-    "@angular/cli": "^20.3.3",
+    "@angular/cli": "^20.3.19",
     "@angular/compiler-cli": "^20.3.0",
     "@nx/angular": "21.5.3",
-    "@nx/workspace": "21.5.3",
     "@schematics/angular": "^20.3.3",
     "@tailwindcss/postcss": "^4.1.13",
     "@types/jasmine": "~5.1.0",
@@ -51,7 +50,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "nx": "21.5.3",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.13",
     "typescript": "~5.9.2"
