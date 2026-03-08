@@ -2,11 +2,11 @@
   "name": "ai-powered-resume",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "nx serve",
-    "build": "nx build",
-    "watch": "nx build --watch --configuration development",
-    "test": "nx test"
+  "ng": "ng",
+  "start": "nx serve",
+  "build": "nx build --skip-nx-cache",
+  "watch": "nx build --watch --configuration development",
+  "test": "nx test"
   },
   "prettier": {
     "printWidth": 100,
